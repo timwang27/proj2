@@ -1,15 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class FollowPlayer : MonoBehaviour
 {
+    public Transform target;
+    public Vector3 offset;
+    public float damping;
 
-    public Transform player;
+    private Vector3 velocity = Vector3.zero;
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        transform.position = player.transform.position + new Vector3(0, 1, -5);
+        Vector3 movePosition = target.position + offset;
+        transform.position = Vector3.SmoothDamp(transform.position, movePosition, ref velocity, damping);
     }
 }
+      
