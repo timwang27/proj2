@@ -26,10 +26,12 @@ public class EnemyController : MonoBehaviour
             lineOfSight.SetPosition(1, hitInfo.point);
             lineOfSight.colorGradient = redColor;
 
-            if (hitInfo.collider.CompareTag("Player")) {
+            if (hitInfo.collider.CompareTag("Player"))
+            {
                 Destroy(hitInfo.collider.gameObject);
             }
-        } else
+        }
+        else
         {
             Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
             lineOfSight.SetPosition(1, transform.position + transform.right * distance);
