@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     float x_input;
     float y_input;
     float walkTimer;
-    float walkSpeed = 0.4f;
+    float walkSpeed = 1.0f;
     #endregion
 
     #region Physics_components
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     #region Unity_functions
     private void Awake()
     {
-        movespeed = 10;
+        movespeed = 12;
         PlayerRB = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
@@ -44,21 +44,18 @@ public class PlayerMovement : MonoBehaviour
     #region Movement_functions
     private void Move()
     {
-        anim.SetBool("Moving", true);
 
         if (x_input == 0 && y_input == 0)
         {
             PlayerRB.velocity = Vector2.zero;
-            anim.SetBool("Moving", false);
+            anim.SetBool("Walk_01", false);
+            anim.SetBool("Idle_01", true);
             walkTimer = 0;
         }
         else
         {
             setVelocityAndDirection();
         }
-
-        anim.SetFloat("DirX", currDirection.x);
-        anim.SetFloat("DirY", currDirection.y);
     }
 
     private void setVelocityAndDirection()
@@ -69,11 +66,21 @@ public class PlayerMovement : MonoBehaviour
         if (x_input < 0)
         {
             roundX = -roundX;
+            if (this.transform.localRotation.eulerAngles.y > 0)
+            {
+                transform.Rotate(0, -200, 0);
+            }
+
+        } else
+        {
+            if (this.transform.localRotation.eulerAngles.y < 200) {
+                transform.Rotate(0, 200, 0);
+            }
         }
         if (y_input < 0)
         {
             roundY = -roundY;
-        }
+        } 
 
         Vector2 vector = new Vector2(x_input, y_input);
         PlayerRB.velocity = vector * movespeed;
@@ -81,6 +88,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (walkTimer <= 0)
         {
+            anim.SetBool("Walk_01", true);
+            anim.SetBool("Idle_01", false);
             walkTimer += walkSpeed;
         }
         else
