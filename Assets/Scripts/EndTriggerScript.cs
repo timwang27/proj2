@@ -11,7 +11,6 @@ public class EndTriggerScript : MonoBehaviour
         {
             GameObject gm = GameObject.FindWithTag("GameController");
             gm.GetComponent<GameManager>().WinGame();
-            Debug.Log("got to here");
         }
     }
 }
