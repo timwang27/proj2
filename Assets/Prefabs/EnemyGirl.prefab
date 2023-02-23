@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3841d1fa46fecf458e7d511b661a475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 30
-  distance: 50
+  rotationSpeed: 40
+  distance: 40
   lineOfSight: {fileID: 0}
   redColor:
     serializedVersion: 2

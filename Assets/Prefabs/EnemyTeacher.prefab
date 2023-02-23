@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9106d307f189f1040bb2eaeefaff5fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 20
   groundDetection: {fileID: 7492544182841341760}
 --- !u!114 &7492544182963157362
 MonoBehaviour:
