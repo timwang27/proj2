@@ -29,6 +29,8 @@ public class EnemyController : MonoBehaviour
             if (hitInfo.collider.CompareTag("Player"))
             {
                 Destroy(hitInfo.collider.gameObject);
+                GameObject gm = GameObject.FindWithTag("GameController");
+                gm.GetComponent<GameManager>().LoseGame();
             }
         }
         else

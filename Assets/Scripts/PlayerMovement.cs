@@ -68,13 +68,13 @@ public class PlayerMovement : MonoBehaviour
             roundX = -roundX;
             if (this.transform.localRotation.eulerAngles.y > 0)
             {
-                transform.Rotate(0, -200, 0);
+                transform.Rotate(0, -180, 0);
             }
 
         } else
         {
-            if (this.transform.localRotation.eulerAngles.y < 200) {
-                transform.Rotate(0, 200, 0);
+            if (this.transform.localRotation.eulerAngles.y < 180) {
+                transform.Rotate(0, 180, 0);
             }
         }
         if (y_input < 0)

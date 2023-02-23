@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7492544182841341760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: groundDetection
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7492544182963157365}
   - component: {fileID: 7492544182963157374}
   - component: {fileID: 7492544182963157362}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyTeacher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,9 +58,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7492544182963157375}
-  m_LocalRotation: {x: -0, y: -0, z: 0.000049720984, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.000052337356, w: 1}
   m_LocalPosition: {x: 1.34, y: 5.6, z: -1.5900657}
-  m_LocalScale: {x: 0.85990393, y: 1.2016648, z: 1}
+  m_LocalScale: {x: 1.201665, y: 1.2016648, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7492544182841341760}
@@ -105,12 +105,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -77178999
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300020, guid: 9e214b956e8291041ad43a0eb5ef03bc, type: 3}
+  m_Sprite: {fileID: 2949561940459812151, guid: c64b1a2f6e1d51e4db28cd1337fefc09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.82, y: 2.04}

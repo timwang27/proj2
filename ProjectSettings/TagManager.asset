@@ -43,3 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: test layer
+    uniqueID: 4217788297
+    locked: 0
